@@ -1,0 +1,878 @@
+schemaVersion: 3
+meta:
+  sourceVersionId: 01988b37-6820-7006-a063-a77cf2333810 # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  description: ""
+  projectId: 019885ba-04ac-7006-a273-56e8e0c99901 # DO NOT CHANGE - Unique ID of the project from which this file was generated
+  title: Thota's first project
+  timezone: null
+  appTheme: SYS_PREF
+  codeLanguage: PYTHON
+  status: null
+  categories: []
+  castDecimalsDefault: true
+  logicQueryCacheTimeout: null
+  publishedQueryCacheTimeout: null
+  hexType: PROJECT
+  allowExecutionReordering: true
+  prerunApp: false
+  cachePublishedAppState: true
+  refreshStalePublishedApp: false
+  autoRerunApp: true
+projectAssets:
+  dataConnections: []
+  envVars: []
+  secrets: []
+sharedAssets:
+  secrets: []
+  vcsPackages: []
+  dataConnections: []
+  externalFileIntegrations: []
+cells:
+  - cellType: SQL
+    cellId: 019885bb-c599-7bb2-bb2b-2dd35a85b020 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: select * from "customers.csv";
+      dataFrameCell: true
+      dataConnectionId: null
+      resultVariableName: customers
+      useRichDisplay: true
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      outputFilteredResult: true
+      allowDuplicateColumns: false
+      tableDisplayConfig:
+        pageSize: 50
+        height: null
+        hideIcons: false
+        defaultColumnWidth: null
+        hideIndex: false
+        defaultSortColumn: null
+        defaultSortIndexColumn: null
+        defaultSortDirection: ASC
+        conditionalFormatting: null
+        calcs: null
+        filters: null
+        columnProperties:
+          - originalName: address
+            renameTo: null
+            size: 128
+            wrapText: null
+            displayFormat: null
+          - originalName: city
+            renameTo: null
+            size: 99
+            wrapText: null
+            displayFormat: null
+          - originalName: email
+            renameTo: null
+            size: 153
+            wrapText: null
+            displayFormat: null
+          - originalName: first_name
+            renameTo: null
+            size: 110
+            wrapText: null
+            displayFormat: null
+          - originalName: gender
+            renameTo: null
+            size: 89
+            wrapText: null
+            displayFormat: null
+          - originalName: id
+            renameTo: null
+            size: 63
+            wrapText: null
+            displayFormat: null
+          - originalName: last_name
+            renameTo: null
+            size: 109
+            wrapText: null
+            displayFormat: null
+          - originalName: phone_number
+            renameTo: null
+            size: 134
+            wrapText: null
+            displayFormat: null
+          - originalName: row-index-0
+            renameTo: null
+            size: 39
+            wrapText: null
+            displayFormat: null
+          - originalName: state
+            renameTo: null
+            size: 79
+            wrapText: null
+            displayFormat: null
+        columnOrdering: null
+        customColumnOrdering: null
+        pinnedColumns: null
+        hiddenColumns: null
+        pinIndexColumns: false
+        showAggregations: false
+        columnAggregations: null
+  - cellType: SQL
+    cellId: 019885bd-bd7a-7bb2-bb2d-a6e6c1c3253a # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: select * from "orders.csv";
+      dataFrameCell: true
+      dataConnectionId: null
+      resultVariableName: orders
+      useRichDisplay: true
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      outputFilteredResult: true
+      allowDuplicateColumns: false
+      tableDisplayConfig:
+        pageSize: 50
+        height: null
+        hideIcons: false
+        defaultColumnWidth: null
+        hideIndex: false
+        defaultSortColumn: null
+        defaultSortIndexColumn: null
+        defaultSortDirection: ASC
+        conditionalFormatting: null
+        calcs: null
+        filters: null
+        columnProperties:
+          - originalName: customer_first_name
+            renameTo: null
+            size: 167
+            wrapText: null
+            displayFormat: null
+          - originalName: customer_id
+            renameTo: null
+            size: 119
+            wrapText: null
+            displayFormat: null
+          - originalName: order_date
+            renameTo: null
+            size: 110
+            wrapText: null
+            displayFormat: null
+          - originalName: order_id
+            renameTo: null
+            size: 97
+            wrapText: null
+            displayFormat: null
+          - originalName: payment_method
+            renameTo: null
+            size: 148
+            wrapText: null
+            displayFormat: null
+          - originalName: price
+            renameTo: null
+            size: 79
+            wrapText: null
+            displayFormat: null
+          - originalName: product_name
+            renameTo: null
+            size: 131
+            wrapText: null
+            displayFormat: null
+          - originalName: quantity
+            renameTo: null
+            size: 96
+            wrapText: null
+            displayFormat: null
+          - originalName: row-index-0
+            renameTo: null
+            size: 46
+            wrapText: null
+            displayFormat: null
+          - originalName: shipping_address
+            renameTo: null
+            size: 147
+            wrapText: null
+            displayFormat: null
+          - originalName: shipping_city
+            renameTo: null
+            size: 123
+            wrapText: null
+            displayFormat: null
+          - originalName: shipping_date
+            renameTo: null
+            size: 128
+            wrapText: null
+            displayFormat: null
+        columnOrdering: null
+        customColumnOrdering: null
+        pinnedColumns: null
+        hiddenColumns: null
+        pinIndexColumns: false
+        showAggregations: false
+        columnAggregations: null
+  - cellType: SQL
+    cellId: 019885be-4ba9-7bb2-bb2e-bce019fcb3b8 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: |-
+        select 
+            * 
+        from 
+            customers
+      dataFrameCell: true
+      dataConnectionId: null
+      resultVariableName: dataframe
+      useRichDisplay: true
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      outputFilteredResult: true
+      allowDuplicateColumns: false
+      tableDisplayConfig:
+        pageSize: 50
+        height: null
+        hideIcons: false
+        defaultColumnWidth: null
+        hideIndex: false
+        defaultSortColumn: null
+        defaultSortIndexColumn: null
+        defaultSortDirection: ASC
+        conditionalFormatting: null
+        calcs: null
+        filters: null
+        columnProperties:
+          - originalName: customer_first_name
+            renameTo: null
+            size: 167
+            wrapText: null
+            displayFormat: null
+          - originalName: customer_id
+            renameTo: null
+            size: 119
+            wrapText: null
+            displayFormat: null
+          - originalName: order_date
+            renameTo: null
+            size: 110
+            wrapText: null
+            displayFormat: null
+          - originalName: order_id
+            renameTo: null
+            size: 97
+            wrapText: null
+            displayFormat: null
+          - originalName: payment_method
+            renameTo: null
+            size: 148
+            wrapText: null
+            displayFormat: null
+          - originalName: price
+            renameTo: null
+            size: 79
+            wrapText: null
+            displayFormat: null
+          - originalName: product_name
+            renameTo: null
+            size: 131
+            wrapText: null
+            displayFormat: null
+          - originalName: quantity
+            renameTo: null
+            size: 96
+            wrapText: null
+            displayFormat: null
+          - originalName: row-index-0
+            renameTo: null
+            size: 46
+            wrapText: null
+            displayFormat: null
+          - originalName: shipping_address
+            renameTo: null
+            size: 147
+            wrapText: null
+            displayFormat: null
+          - originalName: shipping_city
+            renameTo: null
+            size: 123
+            wrapText: null
+            displayFormat: null
+          - originalName: shipping_date
+            renameTo: null
+            size: 128
+            wrapText: null
+            displayFormat: null
+        columnOrdering: null
+        customColumnOrdering: null
+        pinnedColumns: null
+        hiddenColumns: null
+        pinIndexColumns: false
+        showAggregations: false
+        columnAggregations: null
+  - cellType: SQL
+    cellId: 0198861d-1927-7bb2-bb33-8d92473e7031 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: |
+        select 
+            order_id
+            ,customer_id
+            ,product_name
+        from 
+            orders
+      dataFrameCell: true
+      dataConnectionId: null
+      resultVariableName: dataframe_2
+      useRichDisplay: true
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      outputFilteredResult: true
+      allowDuplicateColumns: false
+      tableDisplayConfig:
+        pageSize: 50
+        height: null
+        hideIcons: false
+        defaultColumnWidth: null
+        hideIndex: false
+        defaultSortColumn: null
+        defaultSortIndexColumn: null
+        defaultSortDirection: ASC
+        conditionalFormatting: null
+        calcs: null
+        filters: null
+        columnProperties:
+          - originalName: order_id
+            renameTo: null
+            size: 97
+            wrapText: null
+            displayFormat: null
+          - originalName: row-index-0
+            renameTo: null
+            size: 46
+            wrapText: null
+            displayFormat: null
+        columnOrdering: null
+        customColumnOrdering: null
+        pinnedColumns: null
+        hiddenColumns: null
+        pinIndexColumns: false
+        showAggregations: false
+        columnAggregations: null
+  - cellType: SQL
+    cellId: 01988620-0a80-7bb2-bb34-9c26aec24761 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: |-
+        select *
+        from 
+            orders
+        order by
+            order_date
+      dataFrameCell: true
+      dataConnectionId: null
+      resultVariableName: dataframe_3
+      useRichDisplay: true
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      outputFilteredResult: true
+      allowDuplicateColumns: false
+      tableDisplayConfig:
+        pageSize: 50
+        height: null
+        hideIcons: false
+        defaultColumnWidth: null
+        hideIndex: false
+        defaultSortColumn: null
+        defaultSortIndexColumn: null
+        defaultSortDirection: ASC
+        conditionalFormatting: null
+        calcs: null
+        filters: null
+        columnProperties:
+          - originalName: customer_first_name
+            renameTo: null
+            size: 167
+            wrapText: null
+            displayFormat: null
+          - originalName: customer_id
+            renameTo: null
+            size: 119
+            wrapText: null
+            displayFormat: null
+          - originalName: order_date
+            renameTo: null
+            size: 110
+            wrapText: null
+            displayFormat: null
+          - originalName: order_id
+            renameTo: null
+            size: 97
+            wrapText: null
+            displayFormat: null
+          - originalName: payment_method
+            renameTo: null
+            size: 148
+            wrapText: null
+            displayFormat: null
+          - originalName: price
+            renameTo: null
+            size: 79
+            wrapText: null
+            displayFormat: null
+          - originalName: product_name
+            renameTo: null
+            size: 131
+            wrapText: null
+            displayFormat: null
+          - originalName: quantity
+            renameTo: null
+            size: 96
+            wrapText: null
+            displayFormat: null
+          - originalName: row-index-0
+            renameTo: null
+            size: 46
+            wrapText: null
+            displayFormat: null
+          - originalName: shipping_address
+            renameTo: null
+            size: 147
+            wrapText: null
+            displayFormat: null
+          - originalName: shipping_city
+            renameTo: null
+            size: 123
+            wrapText: null
+            displayFormat: null
+          - originalName: shipping_date
+            renameTo: null
+            size: 128
+            wrapText: null
+            displayFormat: null
+        columnOrdering: null
+        customColumnOrdering: null
+        pinnedColumns: null
+        hiddenColumns: null
+        pinIndexColumns: false
+        showAggregations: false
+        columnAggregations: null
+  - cellType: SQL
+    cellId: 01988624-2013-7bb2-bb35-589b54e794c5 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: |-
+        select 
+            order_id,
+            customer_id,
+            order_date
+        from 
+            orders
+        order by
+            customer_id, order_date desc
+      dataFrameCell: true
+      dataConnectionId: null
+      resultVariableName: dataframe_4
+      useRichDisplay: true
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      outputFilteredResult: true
+      allowDuplicateColumns: false
+      tableDisplayConfig:
+        pageSize: 50
+        height: null
+        hideIcons: false
+        defaultColumnWidth: null
+        hideIndex: false
+        defaultSortColumn: null
+        defaultSortIndexColumn: null
+        defaultSortDirection: ASC
+        conditionalFormatting: null
+        calcs: null
+        filters: null
+        columnProperties:
+          - originalName: customer_first_name
+            renameTo: null
+            size: 167
+            wrapText: null
+            displayFormat: null
+          - originalName: customer_id
+            renameTo: null
+            size: 119
+            wrapText: null
+            displayFormat: null
+          - originalName: order_date
+            renameTo: null
+            size: 110
+            wrapText: null
+            displayFormat: null
+          - originalName: order_id
+            renameTo: null
+            size: 97
+            wrapText: null
+            displayFormat: null
+          - originalName: payment_method
+            renameTo: null
+            size: 148
+            wrapText: null
+            displayFormat: null
+          - originalName: price
+            renameTo: null
+            size: 79
+            wrapText: null
+            displayFormat: null
+          - originalName: product_name
+            renameTo: null
+            size: 131
+            wrapText: null
+            displayFormat: null
+          - originalName: quantity
+            renameTo: null
+            size: 96
+            wrapText: null
+            displayFormat: null
+          - originalName: row-index-0
+            renameTo: null
+            size: 46
+            wrapText: null
+            displayFormat: null
+          - originalName: shipping_address
+            renameTo: null
+            size: 147
+            wrapText: null
+            displayFormat: null
+          - originalName: shipping_city
+            renameTo: null
+            size: 123
+            wrapText: null
+            displayFormat: null
+          - originalName: shipping_date
+            renameTo: null
+            size: 128
+            wrapText: null
+            displayFormat: null
+        columnOrdering: null
+        customColumnOrdering: null
+        pinnedColumns: null
+        hiddenColumns: null
+        pinIndexColumns: false
+        showAggregations: false
+        columnAggregations: null
+  - cellType: SQL
+    cellId: 0198884e-fdad-7bb2-bb38-6b65fbcf48ca # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: |-
+        select 
+            order_id,
+            customer_id,
+            order_date
+        from 
+            orders
+        order by
+            2, 3 desc
+      dataFrameCell: true
+      dataConnectionId: null
+      resultVariableName: dataframe_5
+      useRichDisplay: true
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      outputFilteredResult: true
+      allowDuplicateColumns: false
+      tableDisplayConfig:
+        pageSize: 50
+        height: null
+        hideIcons: false
+        defaultColumnWidth: null
+        hideIndex: false
+        defaultSortColumn: null
+        defaultSortIndexColumn: null
+        defaultSortDirection: ASC
+        conditionalFormatting: null
+        calcs: null
+        filters: null
+        columnProperties:
+          - originalName: customer_id
+            renameTo: null
+            size: 119
+            wrapText: null
+            displayFormat: null
+          - originalName: order_date
+            renameTo: null
+            size: 110
+            wrapText: null
+            displayFormat: null
+          - originalName: order_id
+            renameTo: null
+            size: 97
+            wrapText: null
+            displayFormat: null
+          - originalName: row-index-0
+            renameTo: null
+            size: 46
+            wrapText: null
+            displayFormat: null
+        columnOrdering: null
+        customColumnOrdering: null
+        pinnedColumns: null
+        hiddenColumns: null
+        pinIndexColumns: false
+        showAggregations: false
+        columnAggregations: null
+  - cellType: SQL
+    cellId: 01988870-538b-7bb2-bb38-ea6438d97532 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: |-
+        select
+            distinct order_id
+        from
+            orders
+      dataFrameCell: true
+      dataConnectionId: null
+      resultVariableName: dataframe_6
+      useRichDisplay: true
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      outputFilteredResult: true
+      allowDuplicateColumns: false
+      tableDisplayConfig:
+        pageSize: 50
+        height: null
+        hideIcons: false
+        defaultColumnWidth: null
+        hideIndex: false
+        defaultSortColumn: null
+        defaultSortIndexColumn: null
+        defaultSortDirection: ASC
+        conditionalFormatting: null
+        calcs: null
+        filters: null
+        columnProperties:
+          - originalName: customer_first_name
+            renameTo: null
+            size: 167
+            wrapText: null
+            displayFormat: null
+          - originalName: customer_id
+            renameTo: null
+            size: 119
+            wrapText: null
+            displayFormat: null
+          - originalName: order_date
+            renameTo: null
+            size: 110
+            wrapText: null
+            displayFormat: null
+          - originalName: order_id
+            renameTo: null
+            size: 97
+            wrapText: null
+            displayFormat: null
+          - originalName: payment_method
+            renameTo: null
+            size: 148
+            wrapText: null
+            displayFormat: null
+          - originalName: price
+            renameTo: null
+            size: 79
+            wrapText: null
+            displayFormat: null
+          - originalName: product_name
+            renameTo: null
+            size: 131
+            wrapText: null
+            displayFormat: null
+          - originalName: quantity
+            renameTo: null
+            size: 96
+            wrapText: null
+            displayFormat: null
+          - originalName: row-index-0
+            renameTo: null
+            size: 46
+            wrapText: null
+            displayFormat: null
+          - originalName: shipping_address
+            renameTo: null
+            size: 147
+            wrapText: null
+            displayFormat: null
+          - originalName: shipping_city
+            renameTo: null
+            size: 123
+            wrapText: null
+            displayFormat: null
+          - originalName: shipping_date
+            renameTo: null
+            size: 128
+            wrapText: null
+            displayFormat: null
+        columnOrdering: null
+        customColumnOrdering: null
+        pinnedColumns: null
+        hiddenColumns: null
+        pinIndexColumns: false
+        showAggregations: false
+        columnAggregations: null
+  - cellType: SQL
+    cellId: 01988878-46ac-7bb2-bb3a-1a2a7ea6d3dd # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: |-
+        select
+            distinct customer_id
+        from
+            orders
+      dataFrameCell: true
+      dataConnectionId: null
+      resultVariableName: dataframe_7
+      useRichDisplay: true
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      outputFilteredResult: true
+      allowDuplicateColumns: false
+      tableDisplayConfig:
+        pageSize: 50
+        height: null
+        hideIcons: false
+        defaultColumnWidth: null
+        hideIndex: false
+        defaultSortColumn: null
+        defaultSortIndexColumn: null
+        defaultSortDirection: ASC
+        conditionalFormatting: null
+        calcs: null
+        filters: null
+        columnProperties:
+          - originalName: customer_id
+            renameTo: null
+            size: 119
+            wrapText: null
+            displayFormat: null
+          - originalName: row-index-0
+            renameTo: null
+            size: 39
+            wrapText: null
+            displayFormat: null
+        columnOrdering: null
+        customColumnOrdering: null
+        pinnedColumns: null
+        hiddenColumns: null
+        pinIndexColumns: false
+        showAggregations: false
+        columnAggregations: null
+  - cellType: SQL
+    cellId: 0198887a-a76c-7bb2-bb3a-b835cc23d493 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: |-
+        select
+            *
+        from
+            customers
+      dataFrameCell: true
+      dataConnectionId: null
+      resultVariableName: dataframe_8
+      useRichDisplay: true
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      outputFilteredResult: true
+      allowDuplicateColumns: false
+      tableDisplayConfig:
+        pageSize: 50
+        height: null
+        hideIcons: false
+        defaultColumnWidth: null
+        hideIndex: false
+        defaultSortColumn: null
+        defaultSortIndexColumn: null
+        defaultSortDirection: ASC
+        conditionalFormatting: null
+        calcs: null
+        filters: null
+        columnProperties:
+          - originalName: address
+            renameTo: null
+            size: 128
+            wrapText: null
+            displayFormat: null
+          - originalName: city
+            renameTo: null
+            size: 98
+            wrapText: null
+            displayFormat: null
+          - originalName: email
+            renameTo: null
+            size: 153
+            wrapText: null
+            displayFormat: null
+          - originalName: first_name
+            renameTo: null
+            size: 110
+            wrapText: null
+            displayFormat: null
+          - originalName: gender
+            renameTo: null
+            size: 89
+            wrapText: null
+            displayFormat: null
+          - originalName: id
+            renameTo: null
+            size: 63
+            wrapText: null
+            displayFormat: null
+          - originalName: last_name
+            renameTo: null
+            size: 109
+            wrapText: null
+            displayFormat: null
+          - originalName: phone_number
+            renameTo: null
+            size: 134
+            wrapText: null
+            displayFormat: null
+          - originalName: row-index-0
+            renameTo: null
+            size: 39
+            wrapText: null
+            displayFormat: null
+          - originalName: state
+            renameTo: null
+            size: 79
+            wrapText: null
+            displayFormat: null
+        columnOrdering: null
+        customColumnOrdering: null
+        pinnedColumns: null
+        hiddenColumns: null
+        pinIndexColumns: false
+        showAggregations: false
+        columnAggregations: null
+appLayout:
+  visibleMetadataFields:
+    - NAME
+    - DESCRIPTION
+    - AUTHOR
+    - LAST_EDITED
+    - LAST_RUN
+    - CATEGORIES
+    - STATUS
+    - TABLE_OF_CONTENTS
+  fullWidth: false
+  tabs:
+    - name: Tab 1
+      rows: []
+sharedFilters: []
